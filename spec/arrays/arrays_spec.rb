@@ -54,5 +54,47 @@ describe("Arrays") do
 
   end
 
+  describe(".slice") do
 
+    before(:each) do
+      @array = [ 0, 1, 2, 3, 4, 5 ]
+    end
+
+    it("can return a single item just like [] does") do
+      @array.slice(0).should == 0
+      @array.slice(-1).should == 5
+      @array.slice(0).should == @array[0]
+      @array.slice(-1).should == @array[-1]
+    end
+
+    it("can return a continuous chunk of the array") do
+      start_index = 0
+      total_elements = 2
+      @array.slice(start_index, total_elements).should == [ 0, 1 ]
+
+      start_index = 1
+      total_elements = 3
+      @array.slice(start_index, total_elements).should == [ 1, 2, 3 ]
+    end
+
+    it("when asked to collect elements 'beyond' the end of the array, it collects what it can") do
+      start_index = 4
+      total_elements = 10
+      @array.slice(start_index, total_elements).should == [ 4, 5 ]
+
+      start_index = 5
+      total_elements = 10
+      @array.slice(start_index, total_elements).should == [ 5 ]
+
+      start_index = 6
+      total_elements = 10
+      @array.slice(start_index, total_elements).should == [ ]
+    end
+
+    it("when asked to start with a negative number, it works backward and then goes forward") do
+      @array.slice(-2, 2).should == @array.slice(4, 2)
+      @array.slice(-2, 10).should == @array.slice(4, 10)
+    end
+
+  end
 end
