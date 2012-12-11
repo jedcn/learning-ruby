@@ -1,4 +1,7 @@
-source "http://rubygems.org"
+source 'http://rubygems.org'
 
-gem 'bundler'
 gem 'rspec'
+
+# En garde!
+gem 'guard-rspec'
+gem 'rb-fsevent', require: false if RUBY_PLATFORM =~ /darwin/i
