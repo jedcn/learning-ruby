@@ -56,6 +56,5 @@ You learn about a means for taking executable notes. They are easily referenced.
 They are easily searched.
 
 But most importantly, you start getting involved with a paradigm that can be
-helpfull regardless of the language you're working in. For example-- you can
-take the same approach in
-[JavaScript](https://github.com/jedcn/learning-javascript).
+helpful regardless of the language you're working in. For example-- you can take
+the same approach in [JavaScript](https://github.com/jedcn/learning-javascript).
