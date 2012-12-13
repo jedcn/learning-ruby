@@ -2,11 +2,11 @@ describe("Arrays") do
 
   describe("Construction") do
 
-    it("can be created with a literal syntax") do
+    it("can be created with [ ] (literal style)") do
       array = [ 1, 2, 3 ]
     end
 
-    it("can be created with a constructor syntax") do
+    it("can be created with Array.new (constructor style)") do
       array = Array.new
     end
 
